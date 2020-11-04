@@ -1,4 +1,5 @@
 /target/
+/out/
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
@@ -19,6 +20,7 @@
 *.iml
 *.ipr
 .mvn
+*.class
 
 ### NetBeans ###
 /nbproject/private/
