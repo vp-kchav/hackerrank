@@ -15,7 +15,7 @@ public class MyQueue {
         count = 0;
     }
 
-    public void enqueue(int value) {
+    public synchronized void enqueue(int value) {
         if (isFull()) {
             System.out.println("Queue is full");
             throw new RuntimeException();
@@ -25,7 +25,7 @@ public class MyQueue {
         count++;
     }
 
-    public int dequeue() {
+    public synchronized int dequeue() {
         if (count == 0) {
             System.out.println("No data to dequeue!");
             throw new RuntimeException();
