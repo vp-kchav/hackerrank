@@ -8,11 +8,11 @@ public class RateLimiting {
     public static void main(String arg[]) throws InterruptedException {
         //false
         System.out.println(rateLimit("device_info", 30, 3));
-        Thread.sleep(45000);
+        Thread.sleep(5000);
         System.out.println(rateLimit("device_info", 30, 3));
-        Thread.sleep(45000);
+//        Thread.sleep(45000);
         System.out.println(rateLimit("device_info", 30, 3));
-        Thread.sleep(45000);
+//        Thread.sleep(45000);
         //true
         System.out.println(rateLimit("device_info", 30, 3));
     }
@@ -23,6 +23,7 @@ public class RateLimiting {
 
         if(cache.containsKey(key)){
             Tuple tuple = cache.get(key);
+            System.out.println("tuple: " + tuple.getScaleTimePeriod() + "; scaleSeconds: "+ scaleSeconds);
             if (tuple.getScaleTimePeriod() == scaleSeconds){
                 System.out.println("Bucket found for this period");
                 if(tuple.getNumberOfRequest() >= maxLimit){
