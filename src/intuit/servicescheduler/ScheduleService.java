@@ -1,7 +1,6 @@
 package intuit.servicescheduler;
 
 import java.util.LinkedList;
-import java.util.Queue;
 
 public class ScheduleService {
     LinkedList<Customer> vipCustomers;
