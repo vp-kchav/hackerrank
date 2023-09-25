@@ -1,4 +1,4 @@
-package intuit.comparision;
+package intuit.comparator;
 
 public class Employee {
     private int regno;

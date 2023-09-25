@@ -1,4 +1,4 @@
-package intuit.comparision;
+package intuit.comparator;
 
 import java.util.Comparator;
 
