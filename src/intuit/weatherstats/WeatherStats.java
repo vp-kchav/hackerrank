@@ -1,7 +1,6 @@
 package intuit.weatherstats;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class WeatherStats {
@@ -9,7 +8,7 @@ public class WeatherStats {
         switch (stats) {
             case "temp":
                 //Collections.sort(weatherDatas, new TemCompartor());
-                weatherDatas.sort(new TemCompartor());
+                weatherDatas.sort(new TempCompartor());
             case "humidity":
                 //Collections.sort(weatherDatas, new HumidityComparator());
                 weatherDatas.sort(new HumidityComparator());
