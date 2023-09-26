@@ -2,6 +2,7 @@ package intuit.ratelimiting;
 
 import java.util.HashMap;
 
+//Level Options: `senior`, `staff`, `principal`
 public class RateLimiting {
     static HashMap<String, Tuple> cache = new HashMap<String, Tuple>();
 
@@ -19,7 +20,7 @@ public class RateLimiting {
 
     public static boolean rateLimit(String key, int intervalInSecs, int maxLimit) {
         long currTimeSecs = System.currentTimeMillis() / 1000;
-        long scaleSeconds = currTimeSecs / intervalInSecs;
+        long scaleSeconds = currTimeSecs / intervalInSecs; // after devided within the interval the scale second never change
 
         if(cache.containsKey(key)){
             Tuple tuple = cache.get(key);

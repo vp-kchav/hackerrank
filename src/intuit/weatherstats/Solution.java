@@ -3,6 +3,7 @@ package intuit.weatherstats;
 import java.util.ArrayList;
 import java.util.List;
 
+//Level Options: `swe2`, `sse`, `staff`
 public class Solution {
     public static void main(String[] args) {
 

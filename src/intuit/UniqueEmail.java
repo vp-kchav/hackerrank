@@ -3,7 +3,7 @@ package intuit;
 import java.util.HashSet;
 import java.util.Set;
 
-//SWE2 or SSE
+//Level Options: `swe2` `sse`
 public class UniqueEmail {
 
     public static void main(String arg[]) {

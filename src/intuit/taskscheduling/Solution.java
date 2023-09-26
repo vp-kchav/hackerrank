@@ -2,6 +2,7 @@ package intuit.taskscheduling;
 
 import java.util.LinkedList;
 
+//Level Options: `senior`, `staff`, `principal`
 public class Solution {
     public static void main(String[] args) {
 
