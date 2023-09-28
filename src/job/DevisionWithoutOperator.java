@@ -6,8 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 public class DevisionWithoutOperator {
-	static int divide(int dividend, int divisor)  
-    { 
+	static int divide(int dividend, int divisor) {
           
         // Calculate sign of divisor i.e., 
         // sign will be negative only iff 

@@ -30,7 +30,10 @@ public class UniqueEmail {
             }
             uniqueEmails.add(pre + "@" +post);
         }
+        StringBuilder builder = new StringBuilder();
+        uniqueEmails.forEach(builder::append);
         uniqueEmails.forEach(String::toString);
+        System.out.println(builder);
         return uniqueEmails.size();
     }
 }

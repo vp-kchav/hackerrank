@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class LoopII {
 
-    public static void main(String []argh){
+    public static void main(String []arg){
+        System.out.println(arg.length);
         int t=1;
         for(int i=0;i<t;i++){
             int a = 0;

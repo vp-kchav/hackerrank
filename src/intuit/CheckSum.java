@@ -1,5 +1,7 @@
 package intuit;
 
+
+//Level Options: `swe1`, `swe2`, `sse`, `staff`
 public class CheckSum {
 
 

@@ -1,5 +1,6 @@
 package intuit.smallbiz;
 
+//Level Options: `intern`, `swe1`, `swe2`
 public class Solution {
 
     public static void main(String[] args) {
