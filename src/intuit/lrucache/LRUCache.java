@@ -57,11 +57,11 @@ public class LRUCache {
         node.next = head;
         //node.prev = null;
         if (head != null) {
-            node.next.prev = node;
+            head.prev = node;
         }
         head = node;
         if (tail == null) {
-            tail = head;
+            tail = node;
         }
     }
 
