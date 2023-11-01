@@ -35,7 +35,6 @@ public class TwoSum {
         }
         return result;
     }
-
     // Time complexity: O(n*log(n))
     // Only work if we need to return the value instead of their indexes
     private static int[] findTwoSum_Sorting(int[] nums, int target) {
