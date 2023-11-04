@@ -5,7 +5,7 @@ package algorithm;
 
 public class InsertionSort {
     
-    public int[] insertionSort(int[] arr) {
+    public static int[] insertionSort(int[] arr) {
         for(int i = 1;i<arr.length; i++) {
             for(int j = i; j>0 ; j--) {
                 if(arr[j] < arr[j-1]) {
@@ -20,12 +20,12 @@ public class InsertionSort {
     
     
     
-//    public static void main(String arg[]) {
-//        int []arr = {4,6,3,8,9,1};
-//        insertionSort(arr);
-//        for(int a : arr) {
-//            System.out.print(a+" ");
-//        }
-//    }
+    public static void main(String arg[]) {
+        int []arr = {4,6,3,8,9,1};
+        insertionSort(arr);
+        for(int a : arr) {
+            System.out.print(a+" ");
+        }
+    }
 
 }
