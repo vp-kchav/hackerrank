@@ -3,6 +3,7 @@ package algorithm;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -60,6 +61,9 @@ public class TwoSum {
     }
 
     public static void main(String arg[]) {
+        List<Integer> arr = new ArrayList<>();
+        arr.add(5); arr.add(2);
+        Collections.sort(arr);
         int aray[] = {2, 7, 11, 15};
         int[] result = findTwoSum_BruteForce(aray, 9);
         int[] result1 = findTwoSum(aray, 9);

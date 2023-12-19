@@ -28,6 +28,6 @@ public class DescendingOrder {
 
     public static void main(String []arg) {
         System.out.println(sortDesc(15));
-        System.out.println(sortDesc(123456789));
+        System.out.println(sortDesc(123496785));
     }
 }

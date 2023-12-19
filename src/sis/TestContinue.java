@@ -1,5 +1,8 @@
 package sis;
 
+/**
+ * count number from array and if the index is even plus another 10
+ */
 public class TestContinue {
     public static void main(String arg[]) {
         int[] number={1,2,3,4,5};

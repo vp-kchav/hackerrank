@@ -1,12 +1,10 @@
 package codewars;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.IntSummaryStatistics;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
-import static java.util.Arrays.stream;
 
 public class CountingDuplicates {
     public static int duplicateCount(String text) {

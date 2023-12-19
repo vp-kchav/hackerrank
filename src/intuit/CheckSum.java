@@ -2,6 +2,15 @@ package intuit;
 
 
 //Level Options: `swe1`, `swe2`, `sse`, `staff`
+
+import java.util.Arrays;
+import java.util.IntSummaryStatistics;
+import java.util.stream.Stream;
+
+/**
+ * Part 1: In this problem, you will build an application which calculates the checksum of a data set. The input comes in the form of a table. For each row in the table, determine the difference between the largest value and the smallest value; the checksum is the sum of all those differences.
+ * part 2: The goal is to find the only two numbers in each row where one evenly divides the other - that is, where the result of the division operation is a whole number. Find these numbers on each line, divide them, then add each line's result.
+ */
 public class CheckSum {
 
 
@@ -30,10 +39,19 @@ public class CheckSum {
         System.out.println("Part1 result 1: " + checkSum(array));
         System.out.println("Part1 result 2: " + checkSum(array2));
 
-        //part2
+        System.out.println("Part1 result 1: " + checkSumOneFunction(array));
+        System.out.println("Part1 result 2: " + checkSumOneFunction(array2));
+
+        System.out.println("Part1 result 1: " + checkSumUsingStream(array));
+        System.out.println("Part1 result 2: " + checkSumUsingStream(array2));
+
+        System.out.println("------part2-------");
 
         System.out.println("Part2 result 1: " + checkEven(arrayp2));
         System.out.println("Part2 result 1: " + checkEven(array2));
+
+        System.out.println("Part2 result 1: " + checkEvenMathMaxMin(arrayp2));
+        System.out.println("Part2 result 1: " + checkEvenMathMaxMin(array2));
     }
 
     protected static int checkEven(int [][]array) {
@@ -50,6 +68,23 @@ public class CheckSum {
         return sum;
     }
 
+    //enhancement for checkEven
+    protected static int checkEvenMathMaxMin(int [][]array) {
+        int sum = 0;
+        for(int row = 0 ; row < array.length; row ++) {
+            for(int col = 0; col< array[row].length-1 ; col++) {
+                for (int colplus = col+1 ; colplus < array[row].length; colplus++) {
+                    int max = Math.max(array[row][col] , array[row][colplus]);
+                    int min = Math.min(array[row][col] , array[row][colplus]);
+                    if (max % min == 0) {
+                        sum += max/min;
+                    }
+                }
+            }
+        }
+        return sum;
+    }
+
     protected static int checkSum(int [][]array) {
         int sum=0;
         for(int row=0; row < array.length; row++) {
@@ -58,10 +93,27 @@ public class CheckSum {
         return sum;
     }
 
+    protected static int checkSumOneFunction(int [][]array) {
+        int sum=0;
+        for(int row=0; row < array.length; row++) {
+            sum += calMaxMin(array[row]);
+        }
+        return sum;
+    }
+
+    protected static int checkSumUsingStream(int [][]array) {
+        int sum=0;
+        for(int row=0; row < array.length; row++) {
+            sum += calMaxMinWithStream(array[row]);
+        }
+        return sum;
+    }
+
     protected static int findMin(int[] arr) {
         int min = Integer.MAX_VALUE;
         for(int i=0; i<arr.length; i++) {
-            if(arr[i] < min) min = arr[i];
+            //if(arr[i] < min) min = arr[i];
+            min = Math.min(min, arr[i]);
         }
         return min;
     }
@@ -69,9 +121,27 @@ public class CheckSum {
     protected static int findMax(int[] arr) {
         int max = 0;
         for(int i=0; i<arr.length; i++) {
-            if(arr[i] > max) max = arr[i];
+            //if(arr[i] > max) max = arr[i];
+            max = Math.max(max, arr[i]);
         }
         return max;
+    }
+
+    protected static int calMaxMin(int[] arr) {
+        int max = 0;
+        int min = Integer.MAX_VALUE;
+        for(int i=0; i<arr.length; i++) {
+            //if(arr[i] > max) max = arr[i];
+            max = Math.max(max, arr[i]);
+            min = Math.min(min, arr[i]);
+        }
+        return max - min;
+    }
+
+    protected static int calMaxMinWithStream(int[] arr) {
+        IntSummaryStatistics  statistics = Arrays.stream(arr).summaryStatistics();
+        //Arrays.stream(arr).mapToInt(i-> Integer.valueOf(i)).summaryStatistics(); if arr is array of String
+        return statistics.getMax() - statistics.getMin();
     }
 
 }

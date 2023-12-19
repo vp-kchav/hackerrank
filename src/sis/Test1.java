@@ -9,6 +9,7 @@ public class Test1 {
 //		System.out.println(a==c);
 //		System.out.println(b.equals(c));
 		int s = solution1(32);
+		displayFibonacciLoop(32);
 		System.out.println(s);
 		if(s > 999999) {
 			s = s%1000000;
@@ -38,7 +39,17 @@ public class Test1 {
 		int f = fibonacci(N);
 		return f;
     }
-	
+
+	public static void displayFibonacciLoop(int n) {
+		int num1 = 0;
+		int num2 = 1;
+		for (int i=1; i<=n; i++) {
+			System.out.println(num1 + " ");
+			int previousTwo = num1 + num2;
+			num1 = num2;
+			num2 = previousTwo;
+		}
+	}
 	public static  int fibonacci(int n)  {
 	    if(n == 0)
 	        return 0;

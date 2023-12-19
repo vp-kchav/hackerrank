@@ -1,6 +1,6 @@
 package intuit.queue;
 
-public class MyQueue {
+public class  MyQueue {
     private int []array;
     private int capability;
     private int count;

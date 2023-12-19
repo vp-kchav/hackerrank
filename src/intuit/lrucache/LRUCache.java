@@ -43,8 +43,8 @@ public class LRUCache {
         } else {
             Node newNode = new Node(key, value);
             if (map.size() >= cap) {// maximum capacity reached. remove least accessed element
-                map.remove(tail.key);
                 removeNode(tail);
+                map.remove(tail.key);
                 addAtFront(newNode);
             } else {
                 addAtFront(newNode);
@@ -53,29 +53,32 @@ public class LRUCache {
         }
     }
 
-    public void addAtFront(Node node) {
+    private void addAtFront(Node node) {
         node.next = head;
         //node.prev = null;
         if (head != null) {
             head.prev = node;
         }
         head = node;
+        //check for first time add we need to assign tail to the first node added
         if (tail == null) {
             tail = node;
         }
     }
 
-    public void removeNode(Node node) {
+    private void removeNode(Node node) {
 
-        if (node.prev != null) {
-            node.prev.next = node.next;
-        } else {
+        //re assgign previous
+        if (node.prev == null) { //head has no previous so if it is null meaning we remove head => assign new head with removedNode.next
             head = node.next;
-        }
-        if (node.next != null) {
-            node.next.prev = node.prev;
         } else {
+            node.prev.next = node.next;
+        }
+        //reassign next
+        if (node.next == null) { // tail has no next(last one) so if it is null meaning we remove tails => assign ne tail with removedNode.previous
             tail = node.prev;
+        } else {
+            node.next.prev = node.prev;
         }
     }
 }

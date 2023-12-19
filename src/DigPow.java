@@ -20,6 +20,7 @@ public class DigPow {
     }
 
     public static void main(String arg[]) {
-        long d = digPow(89,1);
+        long d = digPow(1,100);
+        System.out.println(d);
     }
 }

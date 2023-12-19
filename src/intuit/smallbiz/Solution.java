@@ -23,14 +23,14 @@ public class Solution {
         cF.addRelation(cG);
 
         /* Part 3 solution */
-        System.out.println(cA.getDegreeOfSeparation(cD));
+//        System.out.println(cA.getDegreeOfSeparation(cD));
 
-        System.out.println(cA.getDegreeOfSeparation(cE));
-        System.out.println(cA.getDegreeOfSeparation(cF));
+//        System.out.println(cA.getDegreeOfSeparation(cE));
+//        System.out.println(cA.getDegreeOfSeparation(cF));
         System.out.println(cA.getDegreeOfSeparation(cG));
-        System.out.println(cB.getDegreeOfSeparation(cG));
-        System.out.println(cE.getDegreeOfSeparation(cG));
-        System.out.println(cF.getDegreeOfSeparation(cG));
+//        System.out.println(cB.getDegreeOfSeparation(cG));
+//        System.out.println(cE.getDegreeOfSeparation(cG));
+//        System.out.println(cF.getDegreeOfSeparation(cG));
 
     }
 }

@@ -23,6 +23,8 @@ public class HappyLadyBug {
             }
         }
 
+        System.out.println();
+
         List<Character> allChars = new ArrayList<>(containers.keySet());
         //if there is '_' meaning we can move after checking all ladyBugs has team above
         if(!allChars.contains('_')){

@@ -39,7 +39,7 @@ public class Quicksort {
 //    }
     
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+        //Scanner in = new Scanner(System.in);
         int n = 5;//in.nextInt();
         int[] arr = {4, 5, 3, 7,2};//new int[n];
 //        for(int arr_i = 0; arr_i < n; arr_i++){
@@ -52,6 +52,6 @@ public class Quicksort {
         System.out.println("");
 
 
-        in.close();
+        //in.close();
     }
 }

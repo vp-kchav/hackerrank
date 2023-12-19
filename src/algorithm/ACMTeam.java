@@ -1,9 +1,7 @@
 package algorithm;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class ACMTeam {
 
@@ -60,7 +58,7 @@ public class ACMTeam {
 //        List<Integer> ans = new ArrayList<>();
 //        int teams=0;
 //        ans.add(0);
-//        ans.add(teams);
+//        ans.adxd(teams);
 //        int topicLen = topic.get(0).length();
 //        for(int i = 0;i<topic.size()-1;i++){
 //            for(int j = i+1;j<topic.size();j++){
