@@ -1,7 +1,10 @@
 package algorithm;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ACMTeam {
 
@@ -84,6 +87,9 @@ public class ACMTeam {
     }
 
     public static void main(String arg[]) {
+        List<Integer> list = Stream.of(2,3).collect(Collectors.toList());
+        list.add(4);
+        System.out.println(list);
         List<String> topic = new ArrayList<>();
         topic.add("10101");topic.add("11100");topic.add("11010");topic.add("00101");
         List<Integer> result = acmTeam(topic);
